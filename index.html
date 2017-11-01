@@ -1,1 +1,133 @@
-<h1>Hello there</h1>
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Hello, world!</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  </head>
+  <body>
+  	<style type="text/css">
+  		.list {
+  		  font-family:sans-serif;
+  		}
+  		td {
+  		  padding:10px; 
+  		  border:solid 1px #eee;
+  		}
+
+  		input {
+  		  border:solid 1px #ccc;
+  		  border-radius: 5px;
+  		  padding:7px 14px;
+  		  margin-bottom:10px
+  		}
+  		input:focus {
+  		  outline:none;
+  		  border-color:#aaa;
+  		}
+  		.sort {
+  		  padding:8px 30px;
+  		  border-radius: 6px;
+  		  border:none;
+  		  display:inline-block;
+  		  color:#fff;
+  		  text-decoration: none;
+  		  background-color: #28a8e0;
+  		  height:30px;
+  		}
+  		.sort:hover {
+  		  text-decoration: none;
+  		  background-color:#1b8aba;
+  		}
+  		.sort:focus {
+  		  outline:none;
+  		}
+  		.sort:after {
+  		  display:inline-block;
+  		  width: 0;
+  		  height: 0;
+  		  border-left: 5px solid transparent;
+  		  border-right: 5px solid transparent;
+  		  border-bottom: 5px solid transparent;
+  		  content:"";
+  		  position: relative;
+  		  top:-10px;
+  		  right:-5px;
+  		}
+  		.sort.asc:after {
+  		  width: 0;
+  		  height: 0;
+  		  border-left: 5px solid transparent;
+  		  border-right: 5px solid transparent;
+  		  border-top: 5px solid #fff;
+  		  content:"";
+  		  position: relative;
+  		  top:4px;
+  		  right:-5px;
+  		}
+  		.sort.desc:after {
+  		  width: 0;
+  		  height: 0;
+  		  border-left: 5px solid transparent;
+  		  border-right: 5px solid transparent;
+  		  border-bottom: 5px solid #fff;
+  		  content:"";
+  		  position: relative;
+  		  top:-4px;
+  		  right:-5px;
+  		}
+  		.title-block{
+  			padding: 3rem 1.5rem;
+  			text-align: center;
+  		}
+  	</style>
+    <div class="container-fluid">
+    	<div class="offset-md-2 col-md-8" id="users">
+    		<div class="title-block">
+    			<h1>Commonly used Linux commands</h1>
+    		</div>
+    		<input class="search form-control" placeholder="Search" />
+
+    		<table class="table">
+    	    <!-- IMPORTANT, class="list" have to be at tbody -->
+    	    <tbody class="list">
+    	      <tr>
+    	        <td class="name">Jonny Stromberg</td>
+    	        <td class="born">1986</td>
+    	      </tr>
+    	      <tr>
+    	        <td class="name">Jonas Arnklint</td>
+    	        <td class="born">1985</td>
+    	      </tr>
+    	      <tr>
+    	        <td class="name">Martina Elm</td>
+    	        <td class="born">1986</td>
+    	      </tr>
+    	      <tr>
+    	        <td class="name">Gustaf Lindqvist</td>
+    	        <td class="born">1983</td>
+    	      </tr>
+    	    </tbody>
+    	  </table>    		
+    	</div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+    <script type="text/javascript">
+    	var options = {
+    	  valueNames: [ 'name', 'born' ]
+    	};
+
+    	var userList = new List('users', options);
+    </script>
+  </body>
+</html>
