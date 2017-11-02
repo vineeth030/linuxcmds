@@ -97,27 +97,47 @@
     	    <tbody class="list">
     	      <tr>
     	        <td class="name">
-    	        	<h4>Create a new tar archive.</h4>
-    	        	<p>$ tar cvf archive_name.tar dirname/</p>
+    	        	<h6>Compress a folder to tar.gz</h6>
+                <div class="input-group">
+                    <input class="form-control" id="foo" value="tar -czvf filename.tar.gz /folder-to-be-compressed">
+                    <span class="input-group-btn">
+                        <button class="btn btn-outline-dark" data-clipboard-target="#foo"> Copy </button>
+                    </span>
+                </div>
     	        </td>
     	      </tr>
     	      <tr>
     	        <td class="name">
-    	        	<h4>Extract from an existing tar archive</h4>
-    	        	<p>$ tar xvf archive_name.tar/p>
+                    <h6>Dicompress a tar.gz file</h6>
+                    <div class="input-group">
+                        <input class="form-control" id="foo" value="tar -xvzf filename.tar.gz">
+                        <span class="input-group-btn">
+                            <button class="btn btn-outline-dark" data-clipboard-target="#foo"> Copy </button>
+                        </span>
+                    </div>
     	        </td>
     	      </tr>
     	      <tr>
     	        <td class="name">
-    	        	<h4>Find files using file-name</h4>
-    	        	<p># find -iname "MyCProgram.c"</p>
-    	        </td>
+                <h6>MySQL database export</h6>
+                <div class="input-group">
+                    <input class="form-control" id="foo" value="mysqldump -u root -p databasename > databasename.sql">
+                    <span class="input-group-btn">
+                        <button class="btn btn-outline-dark" data-clipboard-target="#foo"> Copy </button>
+                    </span>
+                </div>
+              </td>
     	      </tr>
     	      <tr>
     	        <td class="name">
-    	        	<h4>Print file content in reverse order</h4>
-    	        	<p>$ sed -n '1!G;h;$p' thegeekstuff.txt</p>
-    	        </td>
+                  <h6>MySQL database import</h4>
+                  <div class="input-group">
+                      <input class="form-control" id="foo" value="mysql -u root -p databasename < databasename.sql">
+                      <span class="input-group-btn">
+                          <button class="btn btn-outline-dark" data-clipboard-target="#foo"> Copy </button>
+                      </span>
+                  </div>
+              </td>
     	      </tr>
     	    </tbody>
     	  </table>    		
@@ -130,12 +150,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+    <script src="https://clipboardjs.com/dist/clipboard.min.js"></script>
     <script type="text/javascript">
     	var options = {
     	  valueNames: [ 'name', 'born' ]
     	};
 
     	var userList = new List('users', options);
+    </script>
+    <script>
+    var clipboard = new Clipboard('.btn');
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
     </script>
   </body>
 </html>
