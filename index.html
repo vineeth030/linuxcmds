@@ -8,6 +8,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
   </head>
   <body>
   	<style type="text/css">
@@ -66,8 +68,24 @@
       .input-group .form-control:focus {
         outline: none;
       }
+      .footer-lnx{
+        font-family: Monaco,Consolas,"Lucida Console",monospace;
+        width: 600px;text-align: center;
+      }
+      
+      .navbar-brand{
+        color: #000;
+      }
   	</style>
+    <nav class="navbar navbar-expand-md navbar-dark bg-default fixed-top">
+        <a class="navbar-brand" href="#">Linux commands for beginers</a>
+        <div class="pull-right" href="#">Github</div>
+    </nav>
     <div class="container-fluid">
+      <!--
+      <header>
+        <div><a href="/"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></div>
+      </header>-->
     	<div class="offset-md-2 col-md-8" id="users">
     		<div class="title-block">
     			<h1>Commonly used Linux commands</h1>
@@ -121,8 +139,46 @@
                   </div>
               </td>
     	      </tr>
+            <tr>
+              <td class="name">
+                  <h6>MySQL database import</h4>
+                  <div class="input-group">
+                      <input class="form-control" id="foo4" value="mysql -u root -p databasename < databasename.sql">
+                      <span class="input-group-btn">
+                          <button class="btn btn-outline-secondary" data-clipboard-target="#foo4"> Copy </button>
+                      </span>
+                  </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="name">
+                  <h6>MySQL database import</h4>
+                  <div class="input-group">
+                      <input class="form-control" id="foo4" value="mysql -u root -p databasename < databasename.sql">
+                      <span class="input-group-btn">
+                          <button class="btn btn-outline-secondary" data-clipboard-target="#foo4"> Copy </button>
+                      </span>
+                  </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="name">
+                  <h6>MySQL database import</h4>
+                  <div class="input-group">
+                      <input class="form-control" id="foo4" value="mysql -u root -p databasename < databasename.sql">
+                      <span class="input-group-btn">
+                          <button class="btn btn-outline-secondary" data-clipboard-target="#foo4"> Copy </button>
+                      </span>
+                  </div>
+              </td>
+            </tr>
     	    </tbody>
-    	  </table>    		
+    	  </table>
+        <footer>
+          <div class="mx-auto footer-lnx">
+            <p>Made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://medium.com/@vineeth030">vineeth</a> & <a href="/"> libin </a></p>
+          </div>
+        </footer>    		
     	</div>
     </div>
 
