@@ -121,9 +121,9 @@
     	      </tr>
     	      <tr>
     	        <td class="name">
-                <h6>MySQL database export</h6>
+                <h6>MySQL database import</h6>
                 <div class="input-group">
-                    <input class="form-control" id="foo3" value="mysqldump -u root -p databasename > databasename.sql">
+                    <input class="form-control" id="foo3" value="mysql -u root -p databasename < databasename.sql">
                     <span class="input-group-btn">
                         <button class="btn btn-outline-secondary" data-clipboard-target="#foo3"> Copy </button>
                     </span>
@@ -132,9 +132,9 @@
     	      </tr>
     	      <tr>
     	        <td class="name">
-                  <h6>MySQL database import</h4>
+                  <h6>MySQL database export</h4>
                   <div class="input-group">
-                      <input class="form-control" id="foo4" value="mysql -u root -p databasename < databasename.sql">
+                      <input class="form-control" id="foo4" value="mysqldump -u root -p databasename > databasename.sql">
                       <span class="input-group-btn">
                           <button class="btn btn-outline-secondary" data-clipboard-target="#foo4"> Copy </button>
                       </span>
@@ -143,9 +143,9 @@
     	      </tr>
             <tr>
               <td class="name">
-                  <h6>MySQL database import</h4>
+                  <h6>Remove all files inside a folder</h4>
                   <div class="input-group">
-                      <input class="form-control" id="foo4" value="mysql -u root -p databasename < databasename.sql">
+                      <input class="form-control" id="foo4" value="rm -rf /path/to/directory/*">
                       <span class="input-group-btn">
                           <button class="btn btn-outline-secondary" data-clipboard-target="#foo4"> Copy </button>
                       </span>
@@ -154,9 +154,9 @@
             </tr>
             <tr>
               <td class="name">
-                  <h6>MySQL database import</h4>
+                  <h6>Remove files except n number of files</h4>
                   <div class="input-group">
-                      <input class="form-control" id="foo4" value="mysql -u root -p databasename < databasename.sql">
+                      <input class="form-control" id="foo4" value="rm -r !(file3.zip|file7.sql)">
                       <span class="input-group-btn">
                           <button class="btn btn-outline-secondary" data-clipboard-target="#foo4"> Copy </button>
                       </span>
@@ -165,9 +165,64 @@
             </tr>
             <tr>
               <td class="name">
-                  <h6>MySQL database import</h4>
+                  <h6>Copy files from local computer to remote server</h4>
                   <div class="input-group">
-                      <input class="form-control" id="foo4" value="mysql -u root -p databasename < databasename.sql">
+                      <input class="form-control" id="foo4" value="scp /var/www/html/projectA serverUsername@remoteHost:/var/www/html/projectA">
+                      <span class="input-group-btn">
+                          <button class="btn btn-outline-secondary" data-clipboard-target="#foo4"> Copy </button>
+                      </span>
+                  </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="name">
+                  <h6>Copy files from a remote server to another</h4>
+                  <div class="input-group">
+                      <input class="form-control" id="foo4" value="scp server1Username@remoteHost1:/var/www/html/projectA server2Username@remoteHost2:/var/www/html/projectA">
+                      <span class="input-group-btn">
+                          <button class="btn btn-outline-secondary" data-clipboard-target="#foo4"> Copy </button>
+                      </span>
+                  </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="name">
+                  <h6>List all users</h4>
+                  <div class="input-group">
+                      <input class="form-control" id="foo4" value="compgen -u">
+                      <span class="input-group-btn">
+                          <button class="btn btn-outline-secondary" data-clipboard-target="#foo4"> Copy </button>
+                      </span>
+                  </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="name">
+                  <h6>Login to a new user</h4>
+                  <div class="input-group">
+                      <input class="form-control" id="foo4" value="su username">
+                      <span class="input-group-btn">
+                          <button class="btn btn-outline-secondary" data-clipboard-target="#foo4"> Copy </button>
+                      </span>
+                  </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="name">
+                  <h6>Empty any file using echo</h4>
+                  <div class="input-group">
+                      <input class="form-control" id="foo4" value='echo "" > filename.log'>
+                      <span class="input-group-btn">
+                          <button class="btn btn-outline-secondary" data-clipboard-target="#foo4"> Copy </button>
+                      </span>
+                  </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="name">
+                  <h6>Change ownership of a folder</h4>
+                  <div class="input-group">
+                      <input class="form-control" id="foo4" value='sudo chown -R username:group directory'>
                       <span class="input-group-btn">
                           <button class="btn btn-outline-secondary" data-clipboard-target="#foo4"> Copy </button>
                       </span>
