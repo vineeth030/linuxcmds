@@ -1,238 +1,28 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Hello, world!</title>
-    <!-- Required meta tags -->
+    <title>Linux commands</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <script src="https://unpkg.com/vue"></script>
   </head>
   <body>
-  	<style type="text/css">
-  		.list {
-  		  font-family:sans-serif;
-  		}
-  		td {
-  		  padding:10px; 
-  		  //border:solid 1px #eee;
-  		}
+  	
+    <div id="app" class="container-fluid">
 
-      td.name, .form-control{
-        color: #606060;
-      }
-
-      .table td{
-        border-top: 0px;
-      }
-
-  		input {
-  		  border:solid 1px #ccc;
-  		  border-radius: 5px;
-  		  padding:7px 14px;
-  		  margin-bottom:10px
-  		}
-  		input:focus {
-  		  outline:none;
-  		  border-color:#aaa;
-        box-shadow:none;
-  		}
-
-  		.title-block{
-  			padding: 3rem 1.5rem;
-  			text-align: center;
-        color: #606060;
-  		}
-      .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-        font-family: Monaco,Consolas,"Lucida Console",monospace;
-        margin: 0 0;
-      }
-      .h1, h1 {
-        font-size: 1.5rem;
-      }
-      .input-group .form-control {
-        border: none;
-        padding: 0 0;
-        font-family: Monaco,Consolas,"Lucida Console",monospace;
-        font-size: 0.8rem;
-      }
-      h6 {
-        color: #57bd57;
-        font-size: 0.8rem;
-      }
-      .input-group-btn>.btn {
-        font-size: 0.8rem;
-      }
-      .input-group .form-control:focus {
-        outline: none;
-        box-shadow:none;
-      }
-      .footer-lnx{
-        font-family: Monaco,Consolas,"Lucida Console",monospace;
-        width: 600px;text-align: center;
-      }
-
-      .sub-heading-lnx{
-        margin-top: 20px;
-        font-weight: 100;
-      }
-      
-      .navbar-brand{
-        color: #000;
-      }
-  	</style>
-    <div class="container-fluid">
-      <!--
-      <header>
-        <div><a href="/"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></div>
-      </header>-->
     	<div class="offset-md-2 col-md-8" id="users">
     		<div class="title-block">
     			<h1>Linux commands</h1>
           <p class="sub-heading-lnx">A simple list of linux commands for beginers and frustrated ex windows users like me.</p>
     		</div>
+        
     		<input class="search form-control" placeholder="Search" />
 
-    		<table class="table">
-    	    <!-- IMPORTANT, class="list" have to be at tbody -->
-    	    <tbody class="list">
-    	      <tr>
-    	        <td class="name">
-    	        	<h6>Compress a folder to tar.gz</h6>
-                <div class="input-group">
-                    <input class="form-control" id="foo1" value="tar -czvf filename.tar.gz /folder-to-be-compressed">
-                    <span class="input-group-btn">
-                        <button class="btn btn-outline-secondary" data-clipboard-target="#foo1"> Copy </button>
-                    </span>
-                </div>
-    	        </td>
-    	      </tr>
-    	      <tr>
-    	        <td class="name">
-                    <h6>Dicompress a tar.gz file</h6>
-                    <div class="input-group">
-                        <input class="form-control" id="foo2" value="tar -xvzf filename.tar.gz">
-                        <span class="input-group-btn">
-                            <button class="btn btn-outline-secondary" data-clipboard-target="#foo2"> Copy </button>
-                        </span>
-                    </div>
-    	        </td>
-    	      </tr>
-    	      <tr>
-    	        <td class="name">
-                <h6>MySQL database import</h6>
-                <div class="input-group">
-                    <input class="form-control" id="foo3" value="mysql -u root -p databasename < databasename.sql">
-                    <span class="input-group-btn">
-                        <button class="btn btn-outline-secondary" data-clipboard-target="#foo3"> Copy </button>
-                    </span>
-                </div>
-              </td>
-    	      </tr>
-    	      <tr>
-    	        <td class="name">
-                  <h6>MySQL database export</h4>
-                  <div class="input-group">
-                      <input class="form-control" id="foo4" value="mysqldump -u root -p databasename > databasename.sql">
-                      <span class="input-group-btn">
-                          <button class="btn btn-outline-secondary" data-clipboard-target="#foo4"> Copy </button>
-                      </span>
-                  </div>
-              </td>
-    	      </tr>
-            <tr>
-              <td class="name">
-                  <h6>Remove all files inside a folder</h4>
-                  <div class="input-group">
-                      <input class="form-control" id="foo4" value="rm -rf /path/to/directory/*">
-                      <span class="input-group-btn">
-                          <button class="btn btn-outline-secondary" data-clipboard-target="#foo4"> Copy </button>
-                      </span>
-                  </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="name">
-                  <h6>Remove files except n number of files</h4>
-                  <div class="input-group">
-                      <input class="form-control" id="foo4" value="rm -r !(file3.zip|file7.sql)">
-                      <span class="input-group-btn">
-                          <button class="btn btn-outline-secondary" data-clipboard-target="#foo4"> Copy </button>
-                      </span>
-                  </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="name">
-                  <h6>Copy files from local computer to remote server</h4>
-                  <div class="input-group">
-                      <input class="form-control" id="foo4" value="scp /var/www/html/projectA serverUsername@remoteHost:/var/www/html/projectA">
-                      <span class="input-group-btn">
-                          <button class="btn btn-outline-secondary" data-clipboard-target="#foo4"> Copy </button>
-                      </span>
-                  </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="name">
-                  <h6>Copy files from a remote server to another</h4>
-                  <div class="input-group">
-                      <input class="form-control" id="foo4" value="scp server1Username@remoteHost1:/var/www/html/projectA server2Username@remoteHost2:/var/www/html/projectA">
-                      <span class="input-group-btn">
-                          <button class="btn btn-outline-secondary" data-clipboard-target="#foo4"> Copy </button>
-                      </span>
-                  </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="name">
-                  <h6>List all users</h4>
-                  <div class="input-group">
-                      <input class="form-control" id="foo4" value="compgen -u">
-                      <span class="input-group-btn">
-                          <button class="btn btn-outline-secondary" data-clipboard-target="#foo4"> Copy </button>
-                      </span>
-                  </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="name">
-                  <h6>Login to a new user</h4>
-                  <div class="input-group">
-                      <input class="form-control" id="foo4" value="su username">
-                      <span class="input-group-btn">
-                          <button class="btn btn-outline-secondary" data-clipboard-target="#foo4"> Copy </button>
-                      </span>
-                  </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="name">
-                  <h6>Empty any file using echo</h4>
-                  <div class="input-group">
-                      <input class="form-control" id="foo4" value='echo "" > filename.log'>
-                      <span class="input-group-btn">
-                          <button class="btn btn-outline-secondary" data-clipboard-target="#foo4"> Copy </button>
-                      </span>
-                  </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="name">
-                  <h6>Change ownership of a folder</h4>
-                  <div class="input-group">
-                      <input class="form-control" id="foo4" value='sudo chown -R username:group directory'>
-                      <span class="input-group-btn">
-                          <button class="btn btn-outline-secondary" data-clipboard-target="#foo4"> Copy </button>
-                      </span>
-                  </div>
-              </td>
-            </tr>
-    	    </tbody>
-    	  </table>
+        <command-list></command-list>
+    	  
         <footer>
           <div class="mx-auto footer-lnx">
             <p>Made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://medium.com/@vineeth030">vineeth</a> & <a href="/"> libin </a></p>
@@ -242,27 +32,12 @@
     </div>
 
     <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
     <script src="https://clipboardjs.com/dist/clipboard.min.js"></script>
-    <script type="text/javascript">
-    	var options = {
-    	  valueNames: [ 'name', 'born' ]
-    	};
-
-    	var userList = new List('users', options);
-    </script>
-    <script>
-    var clipboard = new Clipboard('.btn');
-    clipboard.on('success', function(e) {
-        console.log(e);
-    });
-    clipboard.on('error', function(e) {
-        console.log(e);
-    });
-    </script>
+    <script src="app.js"></script>
   </body>
 </html>
