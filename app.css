@@ -4,10 +4,14 @@ a.list-group-item {
   font-size: 14px;
   font-weight: 100;
   color: #606060;
+  cursor: default;
 }
 input.search.form-control{
   font-weight: 100;
   font-size: 14px
+}
+.fa-files-o {
+  cursor: pointer;
 }
 h5.mb-1 {
   font-size: 16px;
