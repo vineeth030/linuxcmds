@@ -1,70 +1,92 @@
+a.list-group-item {
+  border: 0px;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 100;
+  color: #606060;
+}
+input.search.form-control{
+  font-weight: 100;
+  font-size: 14px
+}
+h5.mb-1 {
+  font-size: 16px;
+  font-weight:100;
+}
+p.mb-1 {
+  font-style: 14px !important;
+}
 .list {
-  		  font-family:sans-serif;
-  		}
-  		td {
-  		  padding:10px; 
-  		  //border:solid 1px #eee;
-  		}
+  font-family:sans-serif;
+}
+td {
+  padding:10px; 
+  /*border:solid 1px #eee;*/
+}
 
-      td.name, .form-control{
-        color: #606060;
-      }
+td.name, .form-control{
+  color: #606060;
+}
 
-      .table td{
-        border-top: 0px;
-      }
+.table td{
+  border-top: 0px;
+}
 
-  		input {
-  		  border:solid 1px #ccc;
-  		  border-radius: 5px;
-  		  padding:7px 14px;
-  		  margin-bottom:10px
-  		}
-  		input:focus {
-  		  outline:none;
-  		  border-color:#aaa;
-        box-shadow:none;
-  		}
+input {
+  border:solid 1px #ccc;
+  border-radius: 5px;
+  padding:7px 14px;
+  margin-bottom:10px
+}
+input:focus {
+  outline:none;
+  border-color:#aaa;
+  box-shadow:none;
+}
 
-  		.title-block{
-  			padding: 3rem 1.5rem;
-  			text-align: center;
-        color: #606060;
-  		}
-      .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-        font-family: Monaco,Consolas,"Lucida Console",monospace;
-        margin: 0 0;
-      }
-      .h1, h1 {
-        font-size: 1.5rem;
-      }
-      .input-group .form-control {
-        border: none;
-        padding: 0 0;
-        font-family: Monaco,Consolas,"Lucida Console",monospace;
-        font-size: 0.8rem;
-      }
-      h6 {
-        color: #57bd57;
-        font-size: 0.8rem;
-      }
-      .input-group-btn>.btn {
-        font-size: 0.8rem;
-      }
-      .input-group .form-control:focus {
-        outline: none;
-        box-shadow:none;
-      }
-      .footer-lnx{
-        font-family: Monaco,Consolas,"Lucida Console",monospace;
-        width: 600px;text-align: center;
-      }
+.title-block{
+	padding: 3rem 1.5rem;
+	text-align: center;
+  color: #606060;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-family: Monaco,Consolas,"Lucida Console",monospace;
+  margin: 0 0;
+}
+.h1, h1 {
+  font-size: 1.5rem;
+}
+.input-group .form-control {
+  border: none;
+  padding: 0 0;
+  font-family: Monaco,Consolas,"Lucida Console",monospace;
+  font-size: 0.8rem;
+}
+h6 {
+  color: #57bd57;
+  font-size: 0.8rem;
+}
+.input-group-btn>.btn {
+  font-size: 0.8rem;
+}
+.input-group .form-control:focus {
+  outline: none;
+  box-shadow:none;
+}
+.footer-lnx{
+  font-family: Monaco,Consolas,"Lucida Console",monospace;
+  width: 600px;text-align: center;
+  font-weight: 100;
+  color: #606060;
+  font-size: 13px;
+  margin-top: 45px;
+}
 
-      .sub-heading-lnx{
-        margin-top: 20px;
-        font-weight: 100;
-      }
-      
-      .navbar-brand{
-        color: #000;
-      }
+.sub-heading-lnx{
+  margin-top: 20px;
+  font-weight: 100;
+}
+
+.navbar-brand{
+  color: #000;
+}

@@ -5,6 +5,16 @@ Vue.component('command-list', {
                 {   title: 'Clean cache', command: 'php bin/magento cache:flush' },
                 {   title: 'Reindex command', command: 'php bin/magento indexer:reindex' },
                 {   title: 'Deploy  static files', command: 'php bin/magento static:deploy' },
+                {   title: 'Deploy  static files', command: 'php bin/magento static:deploy' },
+                {   title: 'Deploy  static files', command: 'php bin/magento static:deploy' },
+                {   title: 'Deploy  static files', command: 'php bin/magento static:deploy' },
+                {   title: 'Deploy  static files', command: 'php bin/magento static:deploy' },
+                {   title: 'Deploy  static files', command: 'php bin/magento static:deploy' },
+                {   title: 'Deploy  static files', command: 'php bin/magento static:deploy' },
+                {   title: 'Deploy  static files', command: 'php bin/magento static:deploy' },
+                {   title: 'Deploy  static files', command: 'php bin/magento static:deploy' },
+                {   title: 'Deploy  static files', command: 'php bin/magento static:deploy' },
+                {   title: 'Deploy  static files', command: 'php bin/magento static:deploy' }
             ]
         }
     },
