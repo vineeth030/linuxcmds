@@ -19,6 +19,8 @@ h5.mb-1 {
 }
 p.mb-1 {
   font-style: 14px !important;
+  color: #1dae7d;
+  font-weight: 400;
 }
 .list {
   font-family:sans-serif;
@@ -79,7 +81,8 @@ h6 {
 }
 .footer-lnx{
   font-family: Monaco,Consolas,"Lucida Console",monospace;
-  width: 600px;text-align: center;
+  width: 100%;
+  text-align: center;
   font-weight: 100;
   color: #606060;
   font-size: 13px;
