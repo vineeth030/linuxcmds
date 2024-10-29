@@ -2,19 +2,17 @@ Vue.component('command-list', {
     data() {
         return {
             commands: [
-                {   title: 'Clean cache', command: 'php bin/magento cache:flush' },
-                {   title: 'Reindex command', command: 'php bin/magento indexer:reindex' },
-                {   title: 'Deploy  static files', command: 'php bin/magento static:deploy' },
-                {   title: 'Deploy  static files', command: 'php bin/magento static:deploy' },
-                {   title: 'Deploy  static files', command: 'php bin/magento static:deploy' },
-                {   title: 'Deploy  static files', command: 'php bin/magento static:deploy' },
-                {   title: 'Deploy  static files', command: 'php bin/magento static:deploy' },
-                {   title: 'Deploy  static files', command: 'php bin/magento static:deploy' },
-                {   title: 'Deploy  static files', command: 'php bin/magento static:deploy' },
-                {   title: 'Deploy  static files', command: 'php bin/magento static:deploy' },
-                {   title: 'Deploy  static files', command: 'php bin/magento static:deploy' },
-                {   title: 'Deploy  static files', command: 'php bin/magento static:deploy' },
-                {   title: 'Deploy  static files', command: 'php bin/magento static:deploy' }
+                {   title: 'List files', command: 'ls -la' },
+                {   title: 'Get current directory', command: 'pwd' },
+                {   title: 'Search with grep', command: 'grep "search_term" filename' },
+                {   title: 'Give permission/ownership to a user', command: 'chown user /path/to/folder' },
+                {   title: 'Add a user to a group', command: 'sudo usermod -aG groupname username' },
+                {   title: 'Update permission of a file', command: 'chmod u+rwx,g+rx,o+r filename' },
+                {   title: 'Find the program path (executable)', command: 'which program' },
+                {   title: 'Find the program path (binary)', command: 'where is program' },
+                {   title: 'Get last n lines from a file', command: 'tail -n 10 filename' },
+                {   title: 'Find running process', command: 'top' },
+                {   title: 'Kill a running process', command: 'kill -9 PID' },
             ]
         }
     },
