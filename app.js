@@ -13,7 +13,8 @@ Vue.component('command-list', {
                 {   title: 'Get last n lines from a file', command: 'tail -n 10 filename' },
                 {   title: 'Find running process', command: 'top' },
                 {   title: 'Kill a running process', command: 'kill -9 PID' },
-                {   title: 'Kill\Stop an app', command: 'pkill firefox'
+                {   title: 'Kill\Stop an app', command: 'pkill firefox' },
+                {   title: 'Find a file', command: 'locate index.html' },
             ]
         }
     },
